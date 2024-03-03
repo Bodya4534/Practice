@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishonored - Home</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var contentSection = document.querySelector('section');
+            var header = document.querySelector('header');
+            var navBar = document.querySelector('nav');
+            var isMouseDown = false;
+
+            // Function to toggle the 'hidden' class on the content section, header, and navigation bar
+            function toggleVisibility() {
+                contentSection.classList.toggle('hidden');
+                header.classList.toggle('hidden');
+                navBar.classList.toggle('hidden');
+            }
+
+            // Add mousedown event listener to the content section
+            contentSection.addEventListener('mousedown', function () {
+                isMouseDown = true;
+
+                // After 2 seconds, check if the mouse is still down
+                setTimeout(function () {
+                    if (isMouseDown) {
+                        toggleVisibility();
+                    }
+                }, 2000); // 2000 milliseconds = 2 seconds
+            });
+
+            // Add mouseup event listener to the whole document
+            document.addEventListener('mouseup', function () {
+                isMouseDown = false;
+            });
+
+            // Show/Hide Button Click Event
+            document.getElementById('toggleButton').addEventListener('click', function () {
+                toggleVisibility();
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'Handlee', 'cursive';
+            background: url('https://149362454.v2.pressablecdn.com/previously/wp-content/uploads/sites/5/2017/01/sash-1024x576.jpg');
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        header {
+            background-color: rgba(40, 40, 40, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255), 112, 112;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Art Work</h1>
+    </header>
+
+    <nav>
+        <a href="dishonored_page.html">Home</a>
+        <a href="gameplay.html">Gameplay</a>
+        <a href="Locations.html">Locations</a>
+    </nav>
+
+    <section>
+        <p>
+            Dishonored was originally set in medieval Japan, but the idea was dropped early in the game's development<br>
+            because of the difficulties presented in marketing the setting, and because no member of the design team knew <br>
+            much about the culture. Arkane moved the setting to London in 1666, considering that the city was <br>
+            recognizable to Europeans and Americans. Later designs inspired by added gameplay mechanics such as <br>
+            floodlights, electrified barriers and 20th-century technologies that it no longer resembled London, and Arkane <br>
+            opted to develop a fictional city. The city of Dunwall, designed to be a "contemporary and cool" <br>
+            "period piece", was inspired by late-19th and early-20th-century London and Edinburgh. Describing why <br>
+            London had been an initial setting and remained a significant inspiration, Smith said: <br>
+        </p>
+
+        <p>
+            Because it was the last year of the plague, and the year of the great fire of London, which of course ended <br>
+            the plague by burning the slums down ... In this kind of game you’re always looking for a way to up the <br>
+            tension and frankly make the world a little more perilous, and justify why there aren’t giant crowds of <br>
+            people at the market. Then people had the idea for swarms of rats, and we were talking independently about <br>
+            possession, and we wondered if you should be able to possess rats and if they could clean up corpses so you <br>
+            don’t have to hide them. All these pieces just worked together. <br>
+        </p>
+
+        
+        <p>
+            Music <br>
+            Daniel Licht composed the game's score—an ambient, violin-heavy presentation designed to represent <br>
+            19th-century London. Licht's score is crafted to evoke a sense of unsettlement, deliberately avoiding <br>
+            providing comfort. Described as an "evil fog" that seamlessly fades in and out of the game without being <br>
+            initiated by scripted moments, it creates an impression of ever-present danger rather than serving as a <br>
+            warning for impending threats. Given Dishonored's limited cinematic scenes allowing for prolonged <br>
+            interactions with specific characters, Licht faced constraints in developing character themes, leading him <br>
+            to focus predominantly on composing ambient music. <br><br>
+            While samples of Licht's ambient themes were incorporated into the game's scarce cinematic scenes, he was <br>
+            not involved in scoring them. Licht conceived the score as a blend of older music reflecting the period <br>
+            setting and 20th-century techniques, including reversed sounds. The credit song, "Honor for All," was penned <br>
+            by Licht and his nephew Jon, who also provided the vocals. This song serves as a reward for players who <br>
+            successfully complete the game.
+            </p>
+        
+    </section>
+
+    <footer>
+        <button id="toggleButton">Toggle Visibility</button>
+    </footer>
+
+</body>
+
+</html>

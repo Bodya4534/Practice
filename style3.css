@@ -1,0 +1,66 @@
+.hidden {
+    display: none;
+}
+
+#toggleButton {
+    background-color: #000000; /* Dark background color */
+    color: #666666; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+    backdrop-filter: blur(5px); /* Blur effect */
+}
+
+#toggleButton:hover {
+    background-color: #005c9165; /* Darker background color on hover */
+}
+
+header {
+    background: url('https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1659521250_14-kartinkin-net-p-korvo-art-oboi-20.jpg');
+    background-size: cover;
+    padding: 20px;
+    text-align: center;    
+}
+
+section p {
+    padding: 20px;
+    color: #ffffffaa;  /* White text */
+    text-shadow: 2px 2px 40px rgba(0, 0, 0, 0.5);  /* Subtle text glow */
+}
+section {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+section h2 {
+    color: #ffffffaa;
+    text-shadow: 0px 0px 0px rgba(36, 0, 126, 0.964);  /* Subtle text glow */
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Щоб фон зображення був видимим за межами вікна браузера */
+}
+
+section {
+    padding: 20px;
+    position: relative;
+}
+
+h2 {
+    position: absolute;
+    top: 1px; /* Adjust the top distance as needed */
+    right: 30px; /* Adjust the right distance as needed */
+}
+
+section img {
+    position: absolute;
+    top: 80px; /* Adjust the top distance as needed */
+    right: 10px; /* Adjust the right distance as needed */
+}
+
+body {
+    overflow-y: scroll; /* Enable vertical scrolling */
+}

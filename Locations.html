@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishonored - Home</title>
+    <link rel="stylesheet" href="style1.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var contentSection = document.querySelector('section');
+            var header = document.querySelector('header');
+            var navBar = document.querySelector('nav');
+            var isMouseDown = false;
+
+            // Function to toggle the 'hidden' class on the content section, header, and navigation bar
+            function toggleVisibility() {
+                contentSection.classList.toggle('hidden');
+                header.classList.toggle('hidden');
+                navBar.classList.toggle('hidden');
+            }
+
+            // Add mousedown event listener to the content section
+            contentSection.addEventListener('mousedown', function () {
+                isMouseDown = true;
+
+                // After 2 seconds, check if the mouse is still down
+                setTimeout(function () {
+                    if (isMouseDown) {
+                        toggleVisibility();
+                    }
+                }, 2000); // 2000 milliseconds = 2 seconds
+            });
+
+            // Add mouseup event listener to the whole document
+            document.addEventListener('mouseup', function () {
+                isMouseDown = false;
+            });
+
+            // Show/Hide Button Click Event
+            document.getElementById('toggleButton').addEventListener('click', function () {
+                toggleVisibility();
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'Handlee', 'cursive';
+            background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bf0b7054-782c-4bfa-86e3-d17a7c0aa671/d8xysoc-9e119371-d415-4577-9654-7badbc3e60be.png/v1/fill/w_1024,h_576,q_80,strp/dishonored_wallpaper_dunwall_tower_by_darmanfi8015_d8xysoc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvYmYwYjcwNTQtNzgyYy00YmZhLTg2ZTMtZDE3YTdjMGFhNjcxXC9kOHh5c29jLTllMTE5MzcxLWQ0MTUtNDU3Ny05NjU0LTdiYWRiYzNlNjBiZS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.iF5oboH7TWXoDOVgTi87kz0EahzGiKxoWHGFyiVLXnk') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        header {
+            background-color: rgba(40, 40, 40, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255), 112, 112;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Locations</h1>
+    </header>
+
+    <nav>
+        <a href="dishonored_page.html">Home</a>
+        <a href="gameplay.html">Gameplay</a>
+        <a href="artwork.html">Artwork</a>
+    </nav>
+
+    <section>
+        <div class="location-container">
+            <img class="location-image" src="https://i.4pcdn.org/tg/1486426882123.jpg" alt="Location 1">
+            <p class="location-description">The city of Doskvol was established over 1000 years ago as a coal mining settlement on the cold north coast of Akoros. It has withstood the breaking of the world, an attack by a titanic Leviathan, massive fires, a plague, a civil war, and legions of angry ghosts. It is a community of survivors.<br><br>
+
+                The city is densely packed inside the ring of immense lightning towers that protect it from the murderous ghosts of the blighted Deathlands beyond. Every square foot is covered in human construction of some kind—piled one atop another with looming towers, sprawling manors, and stacked row houses; dissected by canals and narrow twisting alleys; connected by a spiderweb of roads, bridges, and elevated walkways.<br><br>
+    
+                Doskvol is one of the most important cities in the Imperium, since it is from its port that the metal steamships of The Leviathan Hunters are launched. The hunters brave the far northern reaches of the Void Sea, far out of sight of land, to grapple with titanic demons of the depths and extract their precious immortal blood—the substance refined into Electroplasm, the power source of civilization.<br><br>
+    
+                All powerful noble families operate hunter ships, each commanded by the scion of their line—and it is by their fortunes at sea and the bounties of blood they capture that the fortunes of the empire wax and wane. The savvy and the ruthless of Doskvol do well to position themselves to profit from this crucial enterprise upon which so many depend—either as an ally or servant of the aristocracy, or by preying upon the corrupted rich and privileged elite.</p>
+        </div>
+
+        <div class="location-container">
+            <img class="location-image" src="https://static.wikia.nocookie.net/dishonoredvideogame/images/5/57/Flooded_district_agroosh_way.jpg/revision/latest/scale-to-width-down/1000?cb=20130715131906" alt="Location 2">
+            <p class="location-description">The Flooded District, officially known as the Rudshore Financial District, is a condemned district in the city of Dunwall,
+                 on the South bank of the Wrenhaven River and near the river mouth.
+                  Devastated by a flood, the City Watch quarantines there those infected by 
+                  the plague and use it to dump victims' corpses. It is blocked off from the rest of the city by walls of light.<br><br>
+    
+                Corvo Attano visits this place during the mission The Flooded District.
+                 The Whalers' base of operations is located in this area and is visited by Daud
+                  during the missions The Surge in The Knife of Dunwall and Choosing Your Mark in The Brigmore Witches.</p>
+        </div>
+
+        <div class="location-container">
+            <img class="location-image" src="https://static1.millenium.org/article_old/images/contenu/actus/JeuxVideo/Dishonored/Dishonored_dlc_graphisme.png" alt="Location 3">
+            <p class="location-description">The Void is an alternate dimension in the Dishonored universe that "hungers for a representational, godlike entity," the Outsider being its current divine inhabitant. However, he is no longer confined in the Void following the event of Death of the Outsider. It consists of a series of floating islands in an organic and chaotic state, which contain uncanny representations of real-world locales held in suspended animation.<br><br>
+
+                While the purpose of the Void is not entirely clear, according to developer Harvey Smith, "The Void sometimes has a divine entity, and sometimes does not. Some last for thousands of years. Sometimes the gap between them lasts as long. Each takes on the attributes of the time or process that made [them]."<br><br>
+            
+                However, it is unknown what other divinities have existed in the Void and how they were destroyed. These beings can be unmade in many ways, including by fading, abdicating, deicide, being accidentally destroyed, and being reclaimed by the Void. Despite this, "It's possible that somewhere people are still worshiping a prior Void divinity."</p>
+        </div>
+    </section>
+
+    <footer>
+        <button id="toggleButton">Toggle Visibility</button>
+    </footer>
+
+</body>
+
+</html>

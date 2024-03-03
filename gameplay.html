@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishonored - Home</title>
+    <link rel="stylesheet" href="style3.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var contentSection = document.querySelector('section');
+            var header = document.querySelector('header');
+            var navBar = document.querySelector('nav');
+            var isMouseDown = false;
+
+            // Function to toggle the 'hidden' class on the content section, header, and navigation bar
+            function toggleVisibility() {
+                contentSection.classList.toggle('hidden');
+                header.classList.toggle('hidden');
+                navBar.classList.toggle('hidden');
+            }
+
+            // Add mousedown event listener to the content section
+            contentSection.addEventListener('mousedown', function () {
+                isMouseDown = true;
+
+                // After 2 seconds, check if the mouse is still down
+                setTimeout(function () {
+                    if (isMouseDown) {
+                        toggleVisibility();
+                    }
+                }, 2000); // 2000 milliseconds = 2 seconds
+            });
+
+            // Add mouseup event listener to the whole document
+            document.addEventListener('mouseup', function () {
+                isMouseDown = false;
+            });
+
+            // Show/Hide Button Click Event
+            document.getElementById('toggleButton').addEventListener('click', function () {
+                toggleVisibility();
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'Handlee', 'cursive';
+            background: url('https://cdn.vox-cdn.com/thumbor/G1RC4zBOhZyAfUN5tXhn8mYGCoE=/0x0:1280x720/1400x788/filters:focal(640x360:641x361)/cdn2.vox-cdn.com/uploads/chorus_asset/file/7520437/dishonored_2_screen.png');
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        header {
+            background-color: rgba(40, 40, 40, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255), 112, 112;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Gameplay</h1>
+    </header>
+
+    <nav>
+        <a href="dishonored_page.html">Home</a>
+        <a href="artwork.html">Artwork</a>
+        <a href="Locations.html">Locations</a>
+    </nav>
+
+    <section>
+        <p>
+            Gameplay <br><br>
+            The development team researched unexpected ways the player could combine Corvo's special powers, <br>
+            such as combining a high jump with the ability to teleport in order to travel greater distances <br>
+            than either ability allowed independently. Instead of restricting these exploits, the team tried <br>
+            to design levels to accommodate them.[15][41] The designers did not consider all of the powers <br> 
+            they conceived during development, such as a power to become a shadow that could move along walls, <br>
+            to be suitable for the game.[16] Some existing powers went through several revisions: a version of <br> 
+            "Bend Time" caused the player to unfreeze enemies when touched; "Possession" allowed the player <br>
+            to control a victim remotely without inhabiting their body, but this offered less challenge. <br>
+            Balancing the effectiveness of the player's powers was considered difficult. Colantonio said: <br>
+            "We wanted to give [the player] very strong powers, to make [the player] really a badass, but <br>
+            at the same time we didn't want the game to be too easy". Each power has a duration, mana <br>
+            cost, and other variable properties that allowed the team to effectively scale even the most <br>
+            destructive of abilities by making them costly to use frequently or limiting the time they remain active. 
+        </p>
+
+        <p>
+            Stealth <br><br>
+            Dishonored's stealth system was originally based on that of the Thief series, <br>
+            which uses level lighting and shadows to determine whether an enemy can detect <br>
+            the player character's presence. However, it was decided that it was unrealistic <br>
+            that an enemy could stand directly in front of a player hiding in shadows and  <br>
+            not detect them. It was also considered that making certain areas dark hid the <br>
+            designers' work and contrasted poorly with well-lit areas. Much of the <br>
+            ambient dialogue was written to be lengthy and add background detail to <br>
+            the game world and to entertain stealth players who may be in a single  <br>
+            area for a long time. Conversely, main story dialogue was written to be <br>
+            short to compensate for the player being able to interrupt or kill the  <br>
+            character who is speaking.
+        </p>
+
+        <h2>Mark of the Outsider</h2>
+        <img src="https://64.media.tumblr.com/657eb90181d5bee8004de92eae443acf/tumblr_ogjp9vr4J51u44mzdo4_540.gif" alt="Animated GIF Example" width="300" height="200">
+    </section>
+
+
+    <footer>
+        <button id="toggleButton">Toggle Visibility</button>
+    </footer>
+
+</body>
+
+</html>
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishonored - Home</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var contentSection = document.querySelector('section');
+            var header = document.querySelector('header');
+            var navBar = document.querySelector('nav');
+            var isMouseDown = false;
+
+            // Function to toggle the 'hidden' class on the content section, header, and navigation bar
+            function toggleVisibility() {
+                contentSection.classList.toggle('hidden');
+                header.classList.toggle('hidden');
+                navBar.classList.toggle('hidden');
+            }
+
+            // Add mousedown event listener to the content section
+            contentSection.addEventListener('mousedown', function () {
+                isMouseDown = true;
+
+                // After 2 seconds, check if the mouse is still down
+                setTimeout(function () {
+                    if (isMouseDown) {
+                        toggleVisibility();
+                    }
+                }, 2000); // 2000 milliseconds = 2 seconds
+            });
+
+            // Add mouseup event listener to the whole document
+            document.addEventListener('mouseup', function () {
+                isMouseDown = false;
+            });
+
+            // Show/Hide Button Click Event
+            document.getElementById('toggleButton').addEventListener('click', function () {
+                toggleVisibility();
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', function () {
+            toggleButton.classList.toggle('active');
+            setTimeout(function () {
+                toggleButton.classList.remove('active');
+            }, 300); // 300 milliseconds = 0.3 seconds
+        });
+    });
+</script>
+
+    <style>
+        body {
+            font-family: 'Handlee', 'cursive';
+            background: url('https://kartinki.pics/pics/uploads/posts/2022-08/1659521264_1-kartinkin-net-p-korvo-art-oboi-2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        header {
+            background-color: rgba(40, 40, 40, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255), 112, 112;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Dishonored - Home</h1>
+    </header>
+
+    <nav>
+        <a href="Locations.html">Locations</a>
+        <a href="gameplay.html">Gameplay</a>
+        <a href="artwork.html">Artwork</a>
+    </nav>
+
+    <section>
+        <h2 style="text-align: center;">Welcome to the World of Dishonored</h2>
+        <p>
+            <strong>Dishonored: The Game World</strong><br>
+            <em>Brief Overview:</em><br>
+            Dishonored is a fantastical adventure game developed by Arkane Studios and published by Bethesda Softworks. Released in 2012, the game stands out for its unique gameplay, atmospheric world, and deep narrative.<br><br>
+    
+            <strong>City of Dunwall:</strong><br>
+            The primary setting of the game unfolds in the city of Dunwall, technologically advanced but plunged into chaos and corruption. The city's architecture impresses with its sophistication, and every corner is filled with history.<br><br>
+    
+            <strong>Magic and Technology:</strong><br>
+            In the world of Dishonored, there's a unique blend of magic and technology. Players gain access to various magical abilities, such as teleportation and the ability to summon swarms of rats. Additionally, progressive technologies are employed to solve challenges.<br><br>
+    
+            <strong>Culture and Characters:</strong><br>
+            The game is rich with distinctive characters and diverse culture. Players interact with significant figures, each with a unique backstory and motivations.<br><br>
+    
+            <strong>Moral Choices:</strong><br>
+            A key feature of the game is the ability to influence the storyline through moral decisions. Player choices impact the surrounding world and determine their character's fate.<br><br>
+    
+            <strong>Dark Art Design:</strong><br>
+            The Dishonored world is shrouded in darkness and mystery, reflected in its dark art design. The game captivates players with its atmosphere and attention to detail.<br><br>
+    
+            <strong>Morally Ambiguous Design:</strong><br>
+            Dishonored's world is morally ambiguous, allowing players to shape the narrative based on their decisions. The game excels in offering a dynamic and immersive journey through a fantasy realm filled with intrigue and adventure.<br><br>
+    
+            <strong>Conclusion:</strong><br>
+            Dishonored provides an immersive journey into a world of intrigue, magic, and compelling characters. The player feels the impact of their decisions on the unfolding story, making this game an unparalleled adventure into the realm of fantasy and excitement.
+        </p>
+    </section>
+
+    <footer>
+        <button id="toggleButton">Toggle Visibility</button>
+    </footer>
+</body>
+
+</html>

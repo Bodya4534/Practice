@@ -1,0 +1,109 @@
+header {
+    background: url('https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1659521250_14-kartinkin-net-p-korvo-art-oboi-20.jpg');
+    background-size: cover;
+    padding: 20px;
+    text-align: center;    
+}
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255); /* Add this line to change text color on hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.location-image {
+    max-width: 900px;
+    max-height: 900px;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.location-description {
+    color: #fff;
+    font-size: 16px;
+    /* Add any other styles for the description */
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.location-description {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value for transparency (0 is fully transparent, 1 is fully opaque) */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+
+
+    .location-image {
+        max-width: 900px;
+        max-height: 900px;
+        width: auto;
+        height: auto;
+        border-radius: 8px;
+        margin-right: 20px;
+        box-shadow: 0 0 50px 25px rgba(0, 0, 0, 0.7); /* Add a soft glow effect */
+    }
+
+    .location-info {
+        flex-grow: 1;
+    }
+
+    .location-title {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .location-description {
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-shadow: 0px 0 20px rgb(4, 0, 108)
+    }
+
+    .image-caption {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        border-radius: 8px;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #toggleButton {
+        background-color: #000000; /* Dark background color */
+        color: #666666; /* Text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, backdrop-filter 0.3s;
+        backdrop-filter: blur(5px); /* Blur effect */
+    }
+    
+    #toggleButton:hover {
+        background-color: #005c9165; /* Darker background color on hover */
+    }
